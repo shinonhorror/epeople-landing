@@ -57,7 +57,7 @@ const Compliance = () => {
 					slidesPerView={3}
 					loop
 					direction={'vertical'}
-					autoplay={{ delay: 3000 }}
+					autoplay={{ delay: 3000, pauseOnMouseEnter: true }}
 					modules={[Autoplay]}
 					onSlideChange={handleSlideChange}
 				>
@@ -70,6 +70,14 @@ const Compliance = () => {
 						return (
 							<SwiperSlide>
 								<div
+									onClick={() => {
+										index === 0
+											? swiperRef.current?.swiper.slideToLoop(
+													SLIDES.length - 1,
+													400,
+											  )
+											: swiperRef.current?.swiper.slideToLoop(index - 1, 400);
+									}}
 									className={`slide__wrapper ${
 										isActive ? 'slide__wrapper--active' : ''
 									}`}

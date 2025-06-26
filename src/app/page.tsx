@@ -18,16 +18,21 @@ export default function Home() {
 	return (
 		<div className={style.main}>
 			<TitleSection title="ePeople AI" description="" />
-			<ValuePropsBanner
-				title="Audit-Ready Compliance Solutions"
-				valueProps={[
-					'Zero Friction Deployment',
-					'No Contracts',
-					'No Hidden Fees',
-					'Increase Revenue / Optimize Expenses',
-					'Mitigate Risk',
-				]}
-			/>
+			<FadeInSection>
+				<Compliance />
+			</FadeInSection>
+			<FadeInSection>
+				<ValuePropsBanner
+					title="Audit-Ready Compliance Solutions"
+					valueProps={[
+						'Zero Friction Deployment',
+						'No Contracts',
+						'No Hidden Fees',
+						'Increase Revenue / Optimize Expenses',
+						'Mitigate Risk',
+					]}
+				/>
+			</FadeInSection>
 			{/* <FadeInSection>
 				<BenefitsSection
 					benefits={[
@@ -94,10 +99,9 @@ export default function Home() {
 					buttonText="Schedule a Demo"
 					onClinkLink="#scheduleDemo"
 				/>
-			</FadeInSection> */}
-			<IntegrationsSection />
+			</FadeInSection> */}{' '}
 			<FadeInSection>
-				<Compliance />
+				<IntegrationsSection />
 			</FadeInSection>
 			<FadeInSection>
 				<TypingText
