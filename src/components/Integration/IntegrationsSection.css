@@ -1,0 +1,23 @@
+.integrations-section {
+}
+
+.integrations-title {
+	font-size: 54px;
+	line-height: 150%;
+	letter-spacing: 0%;
+	margin-bottom: 24px;
+	text-align: center;
+	font-weight: 600;
+}
+
+.integrations-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+
+@media (max-width: 1024px) {
+	.integrations-grid {
+		grid-template-columns: 1fr;
+	}
+}

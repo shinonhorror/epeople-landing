@@ -1,0 +1,120 @@
+.section {
+  position: relative;
+  height: 100dvh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.section-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.section-content::-webkit-scrollbar {
+  display: none;
+}
+
+.rounded__div__down,
+.rounded__div__up {
+  position: absolute;
+  width: 100%;
+  background: #000;
+  z-index: 1;
+}
+
+.rounded__div__down {
+  top: 0;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+.rounded__div__up {
+  bottom: 0;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+}
+
+.anime {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section specific styles */
+.staff-comp {
+  background: white;
+}
+
+.wage-hour {
+  background: white;
+}
+
+.hr-staff {
+  background: white;
+}
+
+.schedule-demo-section {
+  height: auto !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-demo__form_facilities {
+  margin-bottom: 27vh;
+}
+
+.schedule-demo-section .section-content {
+  height: auto;
+  min-height: 100dvh;
+  padding-bottom: 4rem;
+}
+
+/* Footer styles */
+.footer {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  margin-top: auto;
+  height: auto !important;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .section-content {
+    padding: 1rem;
+  }
+  
+  .anime {
+    max-width: 100%;
+  }
+  
+  .schedule-demo-section .section-content {
+    padding-bottom: 2rem;
+  }
+} 
+
+.footer {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin-bottom: 70px;
+  }
+}
