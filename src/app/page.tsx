@@ -11,8 +11,10 @@ import FadeInSection from '@/components/ui/FadeInSection';
 import FeatureListWithImageSection from '@/components/FeatureListWithImage/FeatureListWithImageSection';
 import BenefitsSection from '@/components/BenefitsSection';
 import SolutionsSection from '@/components/SolutionsSection';
-import Compliance from '@/components/entities/comilance';
+import Compliance from '@/components/entities/compliance';
 import TypingText from '@/components/ui/typing-text';
+import Solutions from '@/components/entities/solutions';
+import Integration from '@/components/entities/integration';
 
 export default function Home() {
 	return (
@@ -33,6 +35,8 @@ export default function Home() {
 					]}
 				/>
 			</FadeInSection>
+			<Integration />
+			<Solutions />
 			{/* <FadeInSection>
 				<BenefitsSection
 					benefits={[
@@ -100,16 +104,16 @@ export default function Home() {
 					onClinkLink="#scheduleDemo"
 				/>
 			</FadeInSection> */}{' '}
-			<FadeInSection>
+			{/* <FadeInSection>
 				<IntegrationsSection />
-			</FadeInSection>
-			<FadeInSection>
+			</FadeInSection> */}
+			{/* <FadeInSection>
 				<TypingText
 					text="Audit-Ready Compliance Solutions"
 					classname="solutions"
 				/>
-			</FadeInSection>
-			<FadeInSection>
+			</FadeInSection> */}
+			{/* <FadeInSection>
 				<section id="staff&comp">
 					<FeatureListWithImageSection
 						sectionTitle="Staffing Perfection"
@@ -162,7 +166,7 @@ export default function Home() {
 						imageAlt="Scheduler & Staffing UI"
 					/>
 				</section>
-			</FadeInSection>
+			</FadeInSection> */}
 			{/* <FadeInSection>
 				<AddsComponent
 					title="ePeople Shift Marketplace – Like An Agency, But Better!"

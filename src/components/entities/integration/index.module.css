@@ -1,0 +1,23 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+}
+
+.title {
+	font-weight: 600;
+	font-size: 54px;
+	text-align: center;
+}
+
+.list {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 32px;
+}
+
+@media (max-width: 968px) {
+	.list {
+		grid-template-columns: 1fr;
+	}
+}

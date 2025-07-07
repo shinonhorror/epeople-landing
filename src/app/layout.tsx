@@ -3,10 +3,10 @@ import localFont from 'next/font/local';
 import './globals.css';
 import 'swiper/css/bundle';
 import 'swiper/css/pagination';
-import Header from '@/components/Header';
+import Header from '@/components/entities/header';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Footer from '@/components/Footer';
+import Footer from '@/components/entities/footer/Footer';
 gsap.registerPlugin(ScrollTrigger);
 
 const SFPro = localFont({

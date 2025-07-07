@@ -1,0 +1,61 @@
+.auth_block {
+	height: 40%;
+	background-color: white;
+	border-radius: 24px;
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.auth_wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	gap: 24px;
+}
+
+.auth_title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.auth_title svg {
+	min-width: 24px;
+	min-height: 24px;
+}
+
+.auth__progress__wrapper {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	height: 16px;
+	width: 100%;
+}
+
+.auth_item {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 8px;
+	align-items: center;
+}
+
+.auth__progress {
+	display: block;
+	flex: 1 1;
+	border-radius: 12px;
+	height: 80%;
+	background-color: #dddddd;
+}
+
+.auth__counter {
+	width: fit-content;
+}
+
+.auth__progress__bar {
+	display: block;
+	height: 100%;
+	width: 100%;
+	border-radius: 12px;
+}

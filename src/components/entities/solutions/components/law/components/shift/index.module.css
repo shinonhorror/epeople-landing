@@ -1,0 +1,105 @@
+.shift_block {
+	height: 60%;
+	background-color: white;
+	border-radius: 24px;
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.shift_chart__wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 24px;
+	flex-wrap: wrap;
+}
+
+.shift_chart {
+	width: 180px;
+	height: 180px;
+	position: relative;
+}
+
+.shift_chart__title {
+	font-size: 32px;
+	font-weight: 600;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.shift_info {
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	gap: 24px;
+	flex: 1 1;
+	min-width: 300px;
+}
+
+.shift_item {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+}
+
+.auth_block {
+	height: 40%;
+	background-color: white;
+	border-radius: 24px;
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.auth_wrapper {
+	display: grid;
+	grid-template-columns: 0.5fr 1fr;
+	align-items: center;
+	gap: 24px;
+}
+
+.auth_title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.auth_title svg {
+	min-width: 12px;
+	min-height: 12px;
+}
+
+.auth__progress__wrapper {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	height: 16px;
+	width: 100%;
+}
+
+.auth__progress {
+	display: block;
+	flex: 1 1;
+	border-radius: 12px;
+	height: 80%;
+	background-color: #dddddd;
+}
+
+.auth__counter {
+	width: fit-content;
+}
+
+.auth__progress__bar {
+	display: block;
+	height: 100%;
+	width: 100%;
+	border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+}
