@@ -5,7 +5,8 @@ import styles from './index.module.css';
 import { Icon } from '@iconify/react';
 import { useTextAnimation } from '../../../../../hooks/useTextAnimation';
 import FadeInSection from '@/components/ui/FadeInSection';
-import Image from 'next/image';
+import RateCard from './components/rate';
+import LaborCard from './components/labor';
 
 const StaffingSolution = () => {
 	const sectionRef = useRef(null);
@@ -32,14 +33,10 @@ const StaffingSolution = () => {
 	});
 
 	return (
-		<section id='staff&comp' className={styles.wrapper} ref={sectionRef}>
+		<section id="staff&comp" className={styles.wrapper} ref={sectionRef}>
 			<div className={styles.image_block}>
-				<Image
-					src="/fact_page_1.svg"
-					width={400}
-					height={600}
-					alt="staffing"
-				/>
+				<RateCard sectionRef={sectionRef} />
+				<LaborCard sectionRef={sectionRef} />
 			</div>
 			<div className={styles.text_block}>
 				<div className={styles.text_icon}>
@@ -50,7 +47,7 @@ const StaffingSolution = () => {
 						Staffing Perfection
 					</h3>
 					<p ref={animatedTextRef as RefObject<HTMLParagraphElement>}>
-						Compliance with State and Federal Staffing Ratios
+						Achieve Staffing Compliance while Cutting Labor Costs
 					</p>
 				</div>
 				<FadeInSection>

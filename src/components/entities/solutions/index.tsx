@@ -8,10 +8,17 @@ import FadeInSection from '@/components/ui/FadeInSection';
 const Solutions = () => {
 	return (
 		<div className={styles.wrapper}>
-			<TypingText
-				text="Audit-Ready Compliance Solutions"
-				classname={styles.title}
-			/>
+			<div className={styles.title_wrapper}>
+				<TypingText
+					text="Audit-Ready Compliance Solutions"
+					classname={styles.title}
+				/>
+				<p className={styles.title_desc}>
+					When compliance is built in, audits are just another day at the
+					office.
+				</p>
+			</div>
+
 			<FadeInSection>
 				<StaffingSolution />
 			</FadeInSection>

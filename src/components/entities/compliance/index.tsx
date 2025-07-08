@@ -10,39 +10,34 @@ import { Icon } from '@iconify/react';
 
 const SLIDES = [
 	{
-		title: 'Regulatory Compliance & Risk Mitigation',
-		description:
-			"Sleep easy knowing you're fully protected from fines and audits. Our automated compliance keeps your facility safe and staff accountable—freeing you to focus on care, not paperwork.",
-		icon: 'icon-park-outline:people-safe',
+		title: 'Automate Staffing Compliance',
+		icon: 'ic:baseline-auto-mode',
 		color: '#1249FD',
 	},
 	{
-		title: 'Staffing Efficiency & Cost Optimization',
-		description:
-			'Cut costs and stress with AI-powered scheduling that fills shifts smartly and reduces overtime. Get the right people, at the right time, without wasting resources.',
-		icon: 'uis:schedule',
-		color: '#F39E00',
+		title: 'Reduce Labor Costs',
+		icon: 'material-symbols-light:payment-arrow-down-outline',
+		color: '#00BD75',
 	},
 	{
-		title: 'Workforce Productivity & Retention',
-		description:
-			'Build a stronger team faster. Streamlined onboarding and clear scheduling boost engagement, cut turnover, and create a loyal, ready workforce.',
-		icon: 'ion:bar-chart',
+		title: 'Pass Any PPD or PBJ Audit',
+		icon: 'hugeicons:audit-01',
 		color: '#79DE32',
 	},
 	{
-		title: 'Operational Transparency & Decision-Making',
-		description:
-			'Make confident decisions with real-time data and automated alerts. Stay ahead with clear insights that keep staffing, HR, and payroll running smoothly.',
-		icon: 'hugeicons:ai-user',
+		title: 'Mitigate Risk of Wage Theft',
+		icon: 'icon-park-outline:safe-retrieval',
 		color: '#BA52FF',
 	},
 	{
-		title: 'Revenue Protection & Business Growth',
-		description:
-			'Protect your revenue by avoiding costly penalties and optimizing labor expenses. Scale your operations with ease and watch your facility thrive.',
-		icon: 'healthicons:money-bag',
-		color: '#00BD75',
+		title: 'Mitigate Risk of Wage & Hour Allegations',
+		icon: 'octicon:law-24',
+		color: '#F39E00',
+	},
+	{
+		title: 'Mitigate Risk of Staffing Non-Compliance Fines',
+		icon: 'fluent:money-off-20-regular',
+		color: '#EC4E46',
 	},
 ];
 
@@ -60,7 +55,14 @@ const Compliance = () => {
 
 	return (
 		<section className={styles.section}>
-			<TypingText text="Effortless SNF Compliance" classname={styles.title} />
+			<div className={styles.title_wrapper}>
+				<TypingText text="Effortless SNF Compliance" classname={styles.title} />
+				<p className={styles.title_desc}>
+					With our platform, you’re always ready for any PPD or PBJ audit — no
+					last-minute scrambles, no costly errors. Just clean data, accurate
+					records, and full confidence in your compliance status.
+				</p>
+			</div>
 			<div className={styles.wrapper}>
 				<Swiper
 					className={styles.swiper}
@@ -103,16 +105,15 @@ const Compliance = () => {
 										isActive ? styles.slide__wrapper__active : ''
 									}`}
 								>
-									<span
-										style={{ backgroundColor: item.color }}
-										className={styles.slide__number}
-									>
-										<Icon icon={item.icon} />
-									</span>
-									<h3 className={styles.slide__title}>{item.title}</h3>
-									<p className={styles.slide__description}>
-										{item.description}
-									</p>
+									<h3 className={styles.slide__title}>
+										{item.title}{' '}
+										<span
+											style={{ backgroundColor: item.color }}
+											className={styles.slide__number}
+										>
+											<Icon icon={item.icon} />
+										</span>
+									</h3>
 								</div>
 							</SwiperSlide>
 						);

@@ -20,7 +20,7 @@ const LawSolution = () => {
 		types: 'words',
 		trigger: sectionRef,
 		triggerOptions: {
-			start: 'top center',
+			start: '10% center',
 			end: '+=200',
 			toggleActions: 'play none none reverse',
 			scrub: false,

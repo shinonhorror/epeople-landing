@@ -1,0 +1,46 @@
+.wrapper {
+	background-color: white;
+	border-radius: 24px;
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.title {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.rate_wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	gap: 24px;
+}
+
+.rate_title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.rate_title svg {
+	min-width: 18px;
+	min-height: 18px;
+	width: 18px;
+	height: 18px;
+}
+
+.rate_item {
+	display: flex;
+	justify-content: space-between;
+  align-items: center;
+	gap: 16px;
+}
+
+.rate__counter {
+	font-weight: 600;
+	font-size: 24px;
+	width: fit-content;
+}

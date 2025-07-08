@@ -14,12 +14,9 @@
 	width: 100%;
 	height: fit-content;
 	display: flex;
+	flex-direction: column;
+	gap: 24px;
 	min-height: 600px;
-}
-
-.image_block img {
-	width: 100%;
-	height: auto;
 }
 
 .text_block {

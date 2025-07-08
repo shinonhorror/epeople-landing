@@ -1,0 +1,39 @@
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 16px;
+	align-items: stretch;
+}
+
+.card_wrapper {
+	background-color: white;
+	border-radius: 24px;
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.title {
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.title_icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 8px;
+	border-radius: 6px;
+	width: fit-content;
+	aspect-ratio: 1 / 1;
+	font-size: 20px;
+	height: auto;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+	color: white;
+}
+
+.count {
+	font-size: 32px;
+	font-weight: 500;
+}

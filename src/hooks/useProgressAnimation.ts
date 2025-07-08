@@ -48,12 +48,14 @@ export const useProgressAnimation = (options: UseTextAnimationOptions = {}) => {
 
 		if (progressRef.current) {
 			tl.to(progressRef.current, {
-				width: `${progress}%`,
+				width: progress > 100 ? `100%` : `${progress}%`,
 				...animationOptions,
 			});
 		}
 
 		if (textRef?.current) {
+			gsap.set(textRef.current, { innerText: 0 });
+
 			tl.to(
 				textRef.current,
 				{

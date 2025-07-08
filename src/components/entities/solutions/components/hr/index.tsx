@@ -19,7 +19,7 @@ const HRSolution = () => {
 			ease: 'power2.out',
 		},
 		triggerOptions: {
-			start: 'top center',
+			start: '10% center',
 			end: '+=200',
 			toggleActions: 'play none none reverse',
 			scrub: false,
@@ -35,7 +35,7 @@ const HRSolution = () => {
 				ease: 'power2.out',
 			},
 			triggerOptions: {
-				start: 'top center',
+				start: '10% center',
 				end: '+=200',
 				toggleActions: 'play none none reverse',
 				scrub: false,
@@ -51,7 +51,7 @@ const HRSolution = () => {
 				ease: 'power2.out',
 			},
 			triggerOptions: {
-				start: 'top center',
+				start: '10% center',
 				end: '+=200',
 				toggleActions: 'play none none reverse',
 				scrub: false,
@@ -62,7 +62,7 @@ const HRSolution = () => {
 		types: 'lines,words',
 		trigger: sectionRef,
 		triggerOptions: {
-			start: 'top center',
+			start: '10% center',
 			end: '+=200',
 			toggleActions: 'play none none reverse',
 			scrub: false,
@@ -73,7 +73,7 @@ const HRSolution = () => {
 		types: 'lines,words',
 		trigger: sectionRef,
 		triggerOptions: {
-			start: 'top center',
+			start: '10% center',
 			end: '+=200',
 			toggleActions: 'play none none reverse',
 			scrub: false,
@@ -126,7 +126,7 @@ const HRSolution = () => {
 						</div>
 						<div className={styles.profile__info__row}>
 							<p className={styles.profile__info__label}>Agency</p>
-							<p className={styles.profile__info__text}>ePeople Health</p>
+							<p className={styles.profile__info__text}>NURSA</p>
 						</div>{' '}
 						<div className={styles.profile__info__row}>
 							<p className={styles.profile__info__label}>Hourly Rate</p>
@@ -197,7 +197,7 @@ const HRSolution = () => {
 				</div>
 				<div className={styles.text_wrapper}>
 					<h3 ref={animatedTitleRef as RefObject<HTMLHeadingElement>}>
-						HR Credentialing Compliance
+						HR Credentialing Hub
 					</h3>
 					<p ref={animatedTextRef as RefObject<HTMLParagraphElement>}>
 						Maintaining audit-ready records, onboarding efficiency, credential
