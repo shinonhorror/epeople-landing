@@ -62,11 +62,15 @@ const LawSolution = () => {
 						</div>
 						<div className={styles.text_advantage}>
 							<Icon icon="carbon:checkmark-filled" />
-							Reduce Liability
+							Increase Profit Margin & Reduce Liability
 						</div>
 						<div className={styles.text_advantage}>
 							<Icon icon="carbon:checkmark-filled" />
-							Increase Profit Margin
+							Audit-Ready PBJ Reporting
+						</div>
+						<div className={styles.text_advantage}>
+							<Icon icon="carbon:checkmark-filled" />
+							Performance Management
 						</div>
 					</div>
 				</FadeInSection>

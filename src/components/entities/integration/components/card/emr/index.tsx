@@ -7,25 +7,39 @@ import gsap from 'gsap';
 
 const statusCards = [
 	{
-		title: 'Absence',
-		count: 8,
+		title: 'Admissions',
+		count: 3,
 		bgColor: '#fefaee',
 		iconColor: '#F3D700',
-		icon: 'material-symbols:error-outline',
+		icon: 'grommet-icons:user-new',
 	},
 	{
-		title: 'No Call / No Show',
+		title: 'Discharges',
 		count: 2,
-		bgColor: '#ffeae9',
-		iconColor: '#EC4E46',
-		icon: 'fluent:alert-off-16-regular',
+		bgColor: '#dbf5df',
+		iconColor: '#79DE32',
+		icon: 'icon-park-outline:medical-files',
 	},
 	{
-		title: 'Open Shifts',
-		count: 4,
+		title: 'Deaths',
+		count: 0,
+		bgColor: '#f1efef',
+		iconColor: '#999999',
+		icon: 'uil:file-medical-alt',
+	},
+	{
+		title: 'Transfer In',
+		count: 1,
 		bgColor: '#efeefe',
 		iconColor: '#1249FD',
-		icon: 'mingcute:time-line',
+		icon: 'tabler:transfer-in',
+	},
+	{
+		title: 'Transfer Out',
+		count: 1,
+		bgColor: '#efeefe',
+		iconColor: '#1249FD',
+		icon: 'tabler:transfer-out',
 	},
 ];
 
@@ -58,8 +72,8 @@ const EMRCard = () => {
 	return (
 		<div className={styles.wrapper}>
 			<p className={styles.title}>
-				<span>PPD Value:</span>
-				<span style={{ color: '#79DE32' }}>3.6</span>
+				<span>Live Patient Census:</span>
+				<span style={{ color: '#79DE32' }}>92</span>
 			</p>
 
 			<div className={styles.status__wrapper}>

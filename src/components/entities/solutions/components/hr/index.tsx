@@ -12,7 +12,7 @@ const HRSolution = () => {
 	const sectionRef = useRef(null);
 
 	const { textRef: hourlyPercent } = useProgressAnimation({
-		progress: 20,
+		progress: 25,
 		trigger: sectionRef,
 		animationOptions: {
 			duration: 1.5,
@@ -44,7 +44,7 @@ const HRSolution = () => {
 
 	const { progressRef: animatedCertification, textRef: certificationPercent } =
 		useProgressAnimation({
-			progress: 80,
+			progress: 100,
 			trigger: sectionRef,
 			animationOptions: {
 				duration: 1.5,
@@ -104,7 +104,7 @@ const HRSolution = () => {
 					<div className={styles.profile__info}>
 						<div className={styles.profile__info__row}>
 							<p className={styles.profile__info__label}>Phone Number</p>
-							<p className={styles.profile__info__text}>+1 (205) 358-77-61</p>
+							<p className={styles.profile__info__text}>+1 (205) 358-7761</p>
 						</div>
 						<div className={styles.profile__info__row}>
 							<p className={styles.profile__info__label}>Qualification</p>
@@ -112,7 +112,7 @@ const HRSolution = () => {
 						</div>{' '}
 						<div className={styles.profile__info__row}>
 							<p className={styles.profile__info__label}>License</p>
-							<p className={styles.profile__info__text}>CNA 01299476</p>
+							<p className={styles.profile__info__text}>CA CNA 01299476</p>
 						</div>{' '}
 						<div className={styles.profile__info__row}>
 							<p className={styles.profile__info__label}>Work Status</p>
@@ -141,9 +141,7 @@ const HRSolution = () => {
 							</p>
 						</div>
 						<div className={styles.profile__info__row}>
-							<p className={styles.profile__info__label}>
-								ePeople Certification
-							</p>
+							<p className={styles.profile__info__label}>eCert Credentialing</p>
 							<span className={styles.profile__info__progress__wrapper}>
 								<span className={styles.profile__info__progress}>
 									<span
@@ -165,9 +163,7 @@ const HRSolution = () => {
 							</span>
 						</div>
 						<div className={styles.profile__info__row}>
-							<p className={styles.profile__info__label}>
-								Documentation Compliance
-							</p>{' '}
+							<p className={styles.profile__info__label}>Attendance Rate</p>{' '}
 							<span className={styles.profile__info__progress__wrapper}>
 								<span className={styles.profile__info__progress}>
 									<span
@@ -221,15 +217,15 @@ const HRSolution = () => {
 						</div>
 						<div className={styles.text_advantage}>
 							<Icon icon="carbon:checkmark-filled" />
-							Improved Employee Engagement & Satisfaction
-						</div>
-						<div className={styles.text_advantage}>
-							<Icon icon="carbon:checkmark-filled" />
 							Retention & Stability Improvement
 						</div>{' '}
 						<div className={styles.text_advantage}>
 							<Icon icon="carbon:checkmark-filled" />
 							Centralized Documentation Management
+						</div>{' '}
+						<div className={styles.text_advantage}>
+							<Icon icon="carbon:checkmark-filled" />
+							Improved Employee Engagement & Satisfaction
 						</div>
 					</div>
 				</FadeInSection>

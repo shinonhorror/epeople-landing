@@ -120,12 +120,12 @@
 }
 
 .text_block h3 {
-	font-size: 32px;
+	font-size: 48px;
 	font-weight: 600;
 }
 
 .text_block p {
-	font-size: 16px;
+	font-size: 24px;
 	font-weight: 300;
 	line-height: 1.6;
 }
@@ -159,12 +159,13 @@
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 16px;
+	font-size: 18px;
 }
 
 .text_advantage {
 	display: flex;
 	gap: 8px;
-	align-items: center;
+	align-items: flex-start;
 }
 
 .text_advantage svg {

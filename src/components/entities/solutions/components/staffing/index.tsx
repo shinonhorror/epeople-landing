@@ -35,8 +35,8 @@ const StaffingSolution = () => {
 	return (
 		<section id="staff&comp" className={styles.wrapper} ref={sectionRef}>
 			<div className={styles.image_block}>
+				<LaborCard sectionRef={sectionRef} />{' '}
 				<RateCard sectionRef={sectionRef} />
-				<LaborCard sectionRef={sectionRef} />
 			</div>
 			<div className={styles.text_block}>
 				<div className={styles.text_icon}>
@@ -60,10 +60,7 @@ const StaffingSolution = () => {
 							<Icon icon="carbon:checkmark-filled" />
 							Reduce Dependence on Costly Agency Staff
 						</div>
-						<div className={styles.text_advantage}>
-							<Icon icon="carbon:checkmark-filled" />
-							Real-Time Adjustments to Call-Offs
-						</div>
+
 						<div className={styles.text_advantage}>
 							<Icon icon="carbon:checkmark-filled" />
 							Proactive Compliance Alerts & Notifications
@@ -71,6 +68,14 @@ const StaffingSolution = () => {
 						<div className={styles.text_advantage}>
 							<Icon icon="carbon:checkmark-filled" />
 							Integration with Staffing Agency Marketplace
+						</div>
+						<div className={styles.text_advantage}>
+							<Icon icon="carbon:checkmark-filled" />
+							Audit - Ready PPD Reporting
+						</div>
+						<div className={styles.text_advantage}>
+							<Icon icon="carbon:checkmark-filled" />
+							Real-Time Adjustments to Call-Offs
 						</div>
 					</div>
 				</FadeInSection>

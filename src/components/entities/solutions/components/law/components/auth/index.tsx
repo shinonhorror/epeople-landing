@@ -37,7 +37,7 @@ const AuthCard: FC<IAuthCard> = ({ sectionRef }) => {
 		useProgressAnimation({ ...progressOptions, progress: 30 });
 
 	const { progressRef: animatedWorkzone, textRef: workzonePercent } =
-		useProgressAnimation({ ...progressOptions, progress: 30 });
+		useProgressAnimation({ ...progressOptions, progress: 5 });
 
 	const authData = [
 		{
@@ -72,7 +72,7 @@ const AuthCard: FC<IAuthCard> = ({ sectionRef }) => {
 
 	return (
 		<div className={styles.auth_block}>
-			<p className={styles.image_block__title}>Authorization</p>
+			<p className={styles.image_block__title}>Compliance Issues</p>
 			<div className={styles.auth_wrapper}>
 				{authData.map((item, index) => (
 					<div key={index} className={styles.auth_item}>

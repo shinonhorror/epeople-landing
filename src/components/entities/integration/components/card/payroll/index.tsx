@@ -15,9 +15,9 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title);
 
 const PayrollCard = () => {
 	const employeeData = useMemo(() => {
-		const labels = ['Paid', 'Pending', 'Rejected'];
-		const datasetData = [70, 20, 10];
-		const backgroundColors = ['#79DE32', '#1249FD', '#EC4E46'];
+		const labels = ['Previous Pay Period', 'Upcoming'];
+		const datasetData = [7000, 4000];
+		const backgroundColors = ['#79DE32', '#1249FD'];
 
 		return {
 			labels,
@@ -33,7 +33,7 @@ const PayrollCard = () => {
 
 	const contractorsData = useMemo(() => {
 		const labels = ['Paid', 'Pending', 'Rejected'];
-		const datasetData = [50, 30, 20];
+		const datasetData = [5000, 3000, 2000];
 		const backgroundColors = ['#79DE32', '#1249FD', '#EC4E46'];
 
 		return {
@@ -66,10 +66,9 @@ const PayrollCard = () => {
 							},
 							scales: {
 								y: {
-									suggestedMax: 100,
 									ticks: {
 										callback: function (value, index, ticks) {
-											return value + '%';
+											return value + '$';
 										},
 									},
 								},
@@ -91,10 +90,9 @@ const PayrollCard = () => {
 							},
 							scales: {
 								y: {
-									suggestedMax: 100,
 									ticks: {
 										callback: function (value, index, ticks) {
-											return value + '%';
+											return value + '$';
 										},
 									},
 								},
