@@ -31,7 +31,6 @@ const SectionTitle: FC<ISectionTitle> = ({ title, subtitle, desc }) => {
 			end: '+=300',
 			toggleActions: 'play none none reverse',
 			scrub: false,
-			markers: true,
 		},
 	});
 
@@ -53,7 +52,6 @@ const SectionTitle: FC<ISectionTitle> = ({ title, subtitle, desc }) => {
 			end: '+=300',
 			toggleActions: 'play none none reverse',
 			scrub: false,
-			markers: true,
 		},
 	});
 
