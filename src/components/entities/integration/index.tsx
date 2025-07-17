@@ -4,6 +4,7 @@ import IntegrationCard from './components/card';
 import FadeInSection from '@/components/ui/FadeInSection';
 import PayrollCard from './components/card/payroll';
 import EMRCard from './components/card/emr';
+import SectionTitle from '../sectionTitle';
 
 const INTEGRATION_MOCK = [
 	{
@@ -27,13 +28,12 @@ const INTEGRATION_MOCK = [
 const Integration = () => {
 	return (
 		<div className={styles.wrapper}>
-			<div className={styles.title_wrapper}>
-				<TypingText text="Seamless Integrations" classname={styles.title} />
-				<p className={styles.title_desc}>
-					Let us handle the connection so you can focus on what matters most —
-					your <b> people</b> and your <b> mission</b>.
-				</p>
-			</div>
+			<SectionTitle
+				title="Seamless Integrations"
+				subtitle="Integration"
+				desc="	Let us handle the connection so you can focus on what matters most —
+					your <b> people</b> and your <b> mission</b>."
+			/>
 
 			<FadeInSection>
 				<div className={styles.list}>

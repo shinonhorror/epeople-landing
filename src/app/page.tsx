@@ -1,28 +1,22 @@
-import AddsComponent from '@/components/addsComponent';
 import TitleSection from '@/components/titleSection';
 import ValuePropsBanner from '@/components/ValuePropsBanner';
-import AddsWithPhotoSection from '@/components/AddsWithPhotoSection';
 import ScheduleDemoForm from '@/components/formSection';
 import style from './page.module.css';
 import './styles.css';
-import FeatureSectionWithImage from '@/components/FeatureSectionWithImage/FeatureSectionWithImage';
-import IntegrationsSection from '@/components/Integration/IntegrationsSection';
 import FadeInSection from '@/components/ui/FadeInSection';
-import FeatureListWithImageSection from '@/components/FeatureListWithImage/FeatureListWithImageSection';
-import BenefitsSection from '@/components/BenefitsSection';
-import SolutionsSection from '@/components/SolutionsSection';
 import Compliance from '@/components/entities/compliance';
-import TypingText from '@/components/ui/typing-text';
 import Solutions from '@/components/entities/solutions';
 import Integration from '@/components/entities/integration';
+import Benefits from '@/components/entities/benefits';
+import Welcome from '@/components/entities/welcome';
 
 export default function Home() {
 	return (
 		<div className={style.main}>
-			<TitleSection title="ePeople AI" description="" />
-			<FadeInSection>
+			<Welcome />
+			{/* <FadeInSection>
 				<Compliance />
-			</FadeInSection>
+			</FadeInSection> */}
 			<FadeInSection>
 				<ValuePropsBanner
 					title="Audit-Ready Compliance Solutions"
@@ -35,8 +29,10 @@ export default function Home() {
 					]}
 				/>
 			</FadeInSection>
-			<Integration />
-			<Solutions />
+			<FadeInSection>
+				<Benefits />
+			</FadeInSection>
+			<Solutions /> <Integration />
 			<FadeInSection>
 				<section id="scheduleDemo">
 					<ScheduleDemoForm />
