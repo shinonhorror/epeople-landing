@@ -31,8 +31,16 @@
 	gap: 32px;
 }
 
+.list > :first-child {
+	grid-column: span 2; /* занимает 2 колонки */
+}
+
 @media (max-width: 968px) {
 	.list {
 		grid-template-columns: 1fr;
+	}
+
+	.list > :first-child {
+		grid-column: 1; 
 	}
 }

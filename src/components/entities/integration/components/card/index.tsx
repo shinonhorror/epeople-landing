@@ -35,15 +35,18 @@ const IntegrationCard: FC<IIntegrationCard> = ({
 
 	return (
 		<div className={styles.wrapper} ref={sectionRef}>
-			<h3 className={styles.title}>
-				<div className={styles.title_icon} style={{ backgroundColor: color }}>
-					<Icon icon={icon} />
-				</div>
-				{title}
-			</h3>
-			<p ref={animatedTextRef as RefObject<HTMLParagraphElement>}>
-				{description}
-			</p>
+			<div className={styles.text_wrapper}>
+				<h3 className={styles.title}>
+					<div className={styles.title_icon} style={{ backgroundColor: color }}>
+						<Icon icon={icon} />
+					</div>
+					{title}
+				</h3>
+				<p ref={animatedTextRef as RefObject<HTMLParagraphElement>}>
+					{description}
+				</p>
+			</div>
+
 			{children}
 		</div>
 	);

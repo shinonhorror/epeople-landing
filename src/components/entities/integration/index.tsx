@@ -1,12 +1,20 @@
-import TypingText from '@/components/ui/typing-text';
 import styles from './index.module.css';
 import IntegrationCard from './components/card';
 import FadeInSection from '@/components/ui/FadeInSection';
 import PayrollCard from './components/card/payroll';
 import EMRCard from './components/card/emr';
 import SectionTitle from '../sectionTitle';
+import MarketplaceCard from './components/card/marketplace';
 
 const INTEGRATION_MOCK = [
+	{
+		title: 'Staffing Agency Marketplace ',
+		description:
+			'Effortless On-Click Open Shift Management straight from your Schedule',
+		icon: 'material-symbols:shopping-bag-speed',
+		color: '#BA52FF',
+		children: <MarketplaceCard />,
+	},
 	{
 		title: 'Electronic Medical Records (EMR)',
 		description:

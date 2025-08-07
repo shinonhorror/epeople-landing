@@ -193,7 +193,7 @@ const HRSolution = () => {
 				</div>
 				<div className={styles.text_wrapper}>
 					<h3 ref={animatedTitleRef as RefObject<HTMLHeadingElement>}>
-						HR Credentialing Hub
+						Digital HR & Credentialing Hub
 					</h3>
 					<p ref={animatedTextRef as RefObject<HTMLParagraphElement>}>
 						Maintaining audit-ready records, onboarding efficiency, credential

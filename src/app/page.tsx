@@ -9,11 +9,14 @@ import Solutions from '@/components/entities/solutions';
 import Integration from '@/components/entities/integration';
 import Benefits from '@/components/entities/benefits';
 import Welcome from '@/components/entities/welcome';
+import AI from '@/components/entities/ai';
+import Tools from '@/components/entities/tools';
 
 export default function Home() {
 	return (
 		<div className={style.main}>
 			<Welcome />
+			<Tools />
 			{/* <FadeInSection>
 				<Compliance />
 			</FadeInSection> */}
@@ -32,7 +35,9 @@ export default function Home() {
 			<FadeInSection>
 				<Benefits />
 			</FadeInSection>
-			<Solutions /> <Integration />
+			<Integration />
+			<AI />
+			<Solutions />
 			<FadeInSection>
 				<section id="scheduleDemo">
 					<ScheduleDemoForm />
