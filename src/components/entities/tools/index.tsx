@@ -62,10 +62,12 @@ const Tools = () => {
 							className={`${styles.tab} ${
 								item.id === active.id ? styles.tab_active : ''
 							}`}
-							style={{
-								'--tab-color': item.color,
-								color: item.id === active.id ? item.color : undefined,
-							}}
+							style={
+								{
+									'--tab-color': item.color,
+									color: item.id === active.id ? item.color : undefined,
+								} as React.CSSProperties
+							}
 						>
 							<Icon icon={item.icon} /> <span>{item.title}</span>
 						</div>
