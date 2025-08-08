@@ -2,12 +2,13 @@
 
 import { Icon } from '@iconify/react';
 import styles from './index.module.css';
-import { RefObject, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { useTextAnimation } from '@/hooks/useTextAnimation';
-import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
-import FadeInSection from '@/components/ui/FadeInSection';
+import HRSolution from '../solutions/components/hr';
+import LawSolution from '../solutions/components/law';
+import StaffingSolution from '../solutions/components/staffing';
 
 const TAB_MOCK = [
 	{
@@ -16,8 +17,9 @@ const TAB_MOCK = [
 		icon: 'line-md:account',
 		color: '#00bd75',
 		id: 0,
-		link: '#staff&comp',
+		link: 'staff&comp',
 		image: '/staffing.jpg',
+		component: <StaffingSolution />,
 	},
 	{
 		title: 'Labor Law Compliance',
@@ -25,8 +27,9 @@ const TAB_MOCK = [
 		icon: 'icon-park-outline:people-safe',
 		color: '#1249fd',
 		id: 1,
-		link: '#labor&law',
+		link: 'labor&law',
 		image: '/labor.jpg',
+		component: <LawSolution />,
 	},
 	{
 		title: 'Digital HR & Credentialing Hub',
@@ -34,36 +37,15 @@ const TAB_MOCK = [
 		icon: 'line-md:clipboard-check',
 		color: '#f3d700',
 		id: 2,
-		link: '#hr&staff',
+		link: 'hr&staff',
 		image: '/HR.jpg',
+		component: <HRSolution />,
 	},
 ];
 
 const Tools = () => {
 	const sectionRef = useRef(null);
 	const [active, setActive] = useState(TAB_MOCK[0]);
-
-	const animatedTextRef = useTextAnimation({
-		types: 'lines,words',
-		trigger: sectionRef,
-		triggerOptions: {
-			start: '-20% center',
-			end: '+=200',
-			toggleActions: 'play none none reverse',
-			scrub: false,
-		},
-	});
-
-	const animatedTitleRef = useTextAnimation({
-		types: 'lines,words',
-		trigger: sectionRef,
-		triggerOptions: {
-			start: '-20% center',
-			end: '+=200',
-			toggleActions: 'play none none reverse',
-			scrub: false,
-		},
-	});
 
 	return (
 		<section className={styles.wrapper} ref={sectionRef}>
@@ -80,47 +62,17 @@ const Tools = () => {
 							className={`${styles.tab} ${
 								item.id === active.id ? styles.tab_active : ''
 							}`}
+							style={{
+								'--tab-color': item.color,
+								color: item.id === active.id ? item.color : undefined,
+							}}
 						>
-							<Icon icon={item.icon} /> {item.title}
+							<Icon icon={item.icon} /> <span>{item.title}</span>
 						</div>
 					</SwiperSlide>
 				))}
 			</Swiper>
-			<div className={styles.content}>
-				<div className={styles.text_block}>
-					<div
-						className={styles.text_icon}
-						style={{ backgroundColor: active.color }}
-					>
-						<Icon icon={active.icon} />
-					</div>
-					<div className={styles.text_wrapper}>
-						<h3
-							key={active.title}
-							ref={animatedTitleRef as RefObject<HTMLHeadingElement>}
-						>
-							{active.title}
-						</h3>
-						<p
-							key={active.desc}
-							ref={animatedTextRef as RefObject<HTMLParagraphElement>}
-						>
-							{active.desc}
-						</p>
-					</div>
-					<a href={active.link} className={styles.button}>
-						Read More
-					</a>
-				</div>
-				<FadeInSection>
-					<Image
-						src={active.image}
-						alt={active.title}
-						width={600}
-						height={600}
-					/>
-				</FadeInSection>
-			</div>
+			<div key={active.id}>{active.component}</div>
 		</section>
 	);
 };

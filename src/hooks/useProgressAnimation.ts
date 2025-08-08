@@ -1,9 +1,7 @@
 import { useEffect, useRef } from 'react';
-import SplitType, { TypesList } from 'split-type';
+import { TypesList } from 'split-type';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
 
 type UseTextAnimationOptions = {
 	types?: TypesList;
@@ -70,7 +68,6 @@ export const useProgressAnimation = (options: UseTextAnimationOptions = {}) => {
 
 		return () => {
 			tl.kill();
-			ScrollTrigger.getAll().forEach((st) => st.kill());
 		};
 	}, [types, tagName, trigger, triggerOptions, animationOptions]);
 

@@ -56,12 +56,21 @@ const EMRCard = () => {
 		});
 
 		cardRefs.current.forEach((el) => {
-			tl.from(el, {
-				y: 50,
-				opacity: 0,
-				duration: 0.6,
-				ease: 'power3.out',
-			});
+			tl.fromTo(
+				el,
+				{
+					y: 50,
+					opacity: 0,
+					duration: 0.6,
+					ease: 'power3.out',
+				},
+				{
+					opacity: 1,
+					y: 0,
+					duration: 0.6,
+					ease: 'power3.out',
+				},
+			);
 		});
 
 		return () => {

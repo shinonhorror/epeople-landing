@@ -26,16 +26,13 @@
 	text-align: center;
 	width: fit-content;
 	margin: 0 24px;
+	border-bottom: 1px solid transparent;
 }
 
+.tab.tab_active,
 .tab:hover {
-	border-bottom: 1px solid #7432ff;
-	color: #7432ff;
-}
-
-.tab.tab_active {
-	border-bottom: 1px solid #7432ff;
-	color: #7432ff;
+	border-bottom: 1px solid var(--tab-color);
+	color: var(--tab-color);
 }
 
 .tab svg {

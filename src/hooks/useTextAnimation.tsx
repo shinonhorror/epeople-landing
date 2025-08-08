@@ -59,7 +59,7 @@ export const useTextAnimation = (options: UseTextAnimationOptions = {}) => {
 
 		return () => {
 			animation.kill();
-			ScrollTrigger.getAll().forEach((st) => st.kill());
+			
 			splitText.revert();
 		};
 	}, [types, tagName, trigger, triggerOptions, animationOptions]);

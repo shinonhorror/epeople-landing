@@ -1,5 +1,4 @@
 import styles from './index.module.css';
-import TypingText from '@/components/ui/typing-text';
 import HRSolution from './components/hr';
 import LawSolution from './components/law';
 import StaffingSolution from './components/staffing';

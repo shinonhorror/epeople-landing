@@ -37,7 +37,7 @@ export default function Home() {
 			</FadeInSection>
 			<Integration />
 			<AI />
-			<Solutions />
+			{/* <Solutions /> */}
 			<FadeInSection>
 				<section id="scheduleDemo">
 					<ScheduleDemoForm />

@@ -1,12 +1,8 @@
-import { FC, RefObject, useEffect, useRef } from 'react';
+import { FC, useEffect, useRef } from 'react';
 import styles from './index.module.css';
-import { useProgressAnimation } from '@/hooks/useProgressAnimation';
 import { Icon } from '@iconify/react';
 import gsap from 'gsap';
-
-interface IRateCard {
-	sectionRef: RefObject<HTMLElement | null> | undefined;
-}
+import FadeInSection from '@/components/ui/FadeInSection';
 
 const statusCards = [
 	{
@@ -32,7 +28,7 @@ const statusCards = [
 	},
 ];
 
-const RateCard: FC<IRateCard> = ({ sectionRef }) => {
+const RateCard = () => {
 	const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
 	useEffect(() => {
@@ -45,12 +41,21 @@ const RateCard: FC<IRateCard> = ({ sectionRef }) => {
 		});
 
 		cardRefs.current.forEach((el) => {
-			tl.from(el, {
-				y: 50,
-				opacity: 0,
-				duration: 0.6,
-				ease: 'power3.out',
-			});
+			tl.fromTo(
+				el,
+				{
+					y: 50,
+					opacity: 0,
+					duration: 0.6,
+					ease: 'power3.out',
+				},
+				{
+					opacity: 1,
+					y: 0,
+					duration: 0.6,
+					ease: 'power3.out',
+				},
+			);
 		});
 
 		return () => {
