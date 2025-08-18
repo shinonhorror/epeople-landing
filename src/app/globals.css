@@ -10,6 +10,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	padding-top: 93px; /* Add padding for fixed header */
+	max-width: 100dvw;
+	max-height: 100dvh;
 }
 
 * {
@@ -28,6 +30,10 @@ a {
 main {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	max-width: 1600px;
 }
 
 /* Add responsive padding for mobile */

@@ -2,13 +2,14 @@
 	max-width: 1600px;
 	margin: 0 auto;
 	width: 100%;
-	box-sizing: border-box;
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	gap: 80px;
 	padding: 48px;
-	box-sizing: content-box;
+	box-sizing: border-box;
 }
 
 .twooptions {

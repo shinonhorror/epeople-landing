@@ -178,3 +178,9 @@
 		gap: 32px;
 	}
 }
+
+@media (max-width: 768px) {
+	.text_advantages {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
