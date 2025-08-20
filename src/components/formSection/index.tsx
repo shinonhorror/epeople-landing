@@ -65,7 +65,7 @@ const ScheduleDemoForm: React.FC = () => {
   };
 
   try {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/demo/schedule_form`, {
+    const res = await fetch(`/api/demo/schedule_form`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
