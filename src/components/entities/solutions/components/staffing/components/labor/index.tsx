@@ -2,6 +2,7 @@ import { FC, RefObject } from 'react';
 import styles from './index.module.css';
 import { useProgressAnimation } from '@/hooks/useProgressAnimation';
 import { Icon } from '@iconify/react';
+import RateCard from '../rate';
 
 interface ILaborCard {
 	sectionRef: RefObject<HTMLElement | null> | undefined;
@@ -63,19 +64,7 @@ const LaborCard: FC<ILaborCard> = ({ sectionRef }) => {
 					$<span ref={overagePercent}> 0</span> / day
 				</p>
 			</div>
-			<div className={styles.card_wrapper} style={{ gridColumn: '1/-1' }}>
-				{' '}
-				<div
-					className={styles.title_icon}
-					style={{ backgroundColor: '#BA52FF' }}
-				>
-					<Icon icon="mdi:marketplace-outline" />
-				</div>
-				<p className={styles.title}>Open Marketplace Shift</p>{' '}
-				<span className={styles.count} ref={marketplacePercent}>
-					0
-				</span>
-			</div>
+			<RateCard style={{ gridColumn: '1/-1' }} />
 		</div>
 	);
 };

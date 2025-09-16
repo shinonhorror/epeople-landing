@@ -24,7 +24,7 @@ export default function Footer() {
 							<a href="mailto:support@epeople.com">support@epeople.com</a>
 						</p>
 						<p>
-							<a href="tel:+16502453237">+1 650 245 32–37</a>
+							<a href="tel:+16502453237">+1 650 245 3237</a>
 						</p>
 					</div>
 				</div>

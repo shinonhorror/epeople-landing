@@ -7,6 +7,7 @@ import { useTextAnimation } from '../../../../../hooks/useTextAnimation';
 import FadeInSection from '@/components/ui/FadeInSection';
 import RateCard from './components/rate';
 import LaborCard from './components/labor';
+import PPDCard from './components/ppd';
 
 const StaffingSolution = () => {
 	const sectionRef = useRef(null);
@@ -34,9 +35,6 @@ const StaffingSolution = () => {
 
 	return (
 		<section id="staff&comp" className={styles.wrapper} ref={sectionRef}>
-			<div className={styles.image_block}>
-				<LaborCard sectionRef={sectionRef} /> <RateCard />
-			</div>
 			<div className={styles.text_block}>
 				<div className={styles.text_icon}>
 					<Icon icon="line-md:account" />
@@ -78,6 +76,10 @@ const StaffingSolution = () => {
 						</div>
 					</div>
 				</FadeInSection>
+			</div>
+			<div className={styles.image_block}>
+				<LaborCard sectionRef={sectionRef} />
+				<PPDCard />
 			</div>
 		</section>
 	);

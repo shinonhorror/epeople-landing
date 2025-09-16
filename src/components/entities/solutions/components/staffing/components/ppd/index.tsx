@@ -1,34 +1,26 @@
-import { FC, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import styles from './index.module.css';
 import { Icon } from '@iconify/react';
 import gsap from 'gsap';
-import FadeInSection from '@/components/ui/FadeInSection';
 
 const statusCards = [
 	{
-		title: 'Absence',
-		count: 8,
+		title: 'CNA',
+		count: 2.5,
 		bgColor: '#fefaee',
 		iconColor: '#F3D700',
 		icon: 'material-symbols:error-outline',
 	},
 	{
-		title: 'No Call / No Show',
-		count: 2,
+		title: 'Nurse',
+		count: 1.2,
 		bgColor: '#ffeae9',
 		iconColor: '#EC4E46',
 		icon: 'fluent:alert-off-16-regular',
 	},
-	{
-		title: 'Open Shifts',
-		count: 4,
-		bgColor: '#efeefe',
-		iconColor: '#1249FD',
-		icon: 'mingcute:time-line',
-	},
 ];
 
-const RateCard = ({ style }) => {
+const PPDCard = () => {
 	const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
 	useEffect(() => {
@@ -64,7 +56,12 @@ const RateCard = ({ style }) => {
 	}, []);
 
 	return (
-		<div className={styles.wrapper} style={{ ...style }}>
+		<div className={styles.wrapper} >
+			<p className={styles.title}>
+				<span>PPD Value:</span>
+				<span style={{ color: '#79DE32' }}>3.7</span>
+			</p>
+
 			<div className={styles.status__wrapper}>
 				{statusCards.map((card, index) => (
 					<div
@@ -73,23 +70,9 @@ const RateCard = ({ style }) => {
 							cardRefs.current[index] = el;
 						}}
 						className={styles.status__card}
-						style={{ backgroundColor: card.bgColor }}
 					>
-						<div className={styles.status__title}>
-							<div
-								className={styles.status__title_icon}
-								style={{ backgroundColor: card.iconColor }}
-							>
-								<Icon icon={card.icon} />
-							</div>
-							{card.title}
-						</div>
-						<span
-							className={styles.status__count}
-							style={{ color: card.iconColor }}
-						>
-							{card.count}
-						</span>
+						<div className={styles.status__title}>{card.title}</div>
+						<span className={styles.status__count}>{card.count}</span>
 					</div>
 				))}
 			</div>
@@ -97,4 +80,4 @@ const RateCard = ({ style }) => {
 	);
 };
 
-export default RateCard;
+export default PPDCard;

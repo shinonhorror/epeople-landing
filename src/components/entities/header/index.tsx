@@ -45,7 +45,7 @@ export default function Header() {
 	}, [pathname]);
 
 	const isNursingPage = pathname.startsWith('/nursing');
-	const ctaText = isNursingPage ? 'Sign-Up Today' : 'Schedule a Demo';
+	const ctaText = isNursingPage ? 'Sign-Up Today' : 'Get Started';
 	const ctaLink = isNursingPage
 		? 'https://marketplace.epeople.com/auth'
 		: '#scheduleDemo';
@@ -78,36 +78,45 @@ export default function Header() {
 			</button>
 
 			{/* Десктопный NAV + CTA */}
-			<nav className="header__nav">
-				<DropdownMenu
-					title="Solutions"
-					items={[
-						{
-							label: 'Staffing Perfection',
-							href: '#staff&comp',
-							onClick: handleMenuItemClick,
-						},
-						{
-							label: 'Wage & Hour Compliance',
-							href: '#labor&law',
-							onClick: handleMenuItemClick,
-						},
-						{
-							label: 'HR & Staff Development',
-							href: '#hr&staff',
-							onClick: handleMenuItemClick,
-						},
-						{
-							label: 'Login For Facilities',
-							href: 'https://bb.epeople.com/',
-							isLogin: true,
-							onClick: handleMenuItemClick,
-						},
-					]}
-				/>
-			</nav>
+			<div className="header__nav-wrapper">
+				<nav className="header__nav">
+					<DropdownMenu
+						title="Solutions"
+						items={[
+							{
+								label: 'Staffing Perfection',
+								href: '#staff&comp',
+								onClick: handleMenuItemClick,
+							},
+							{
+								label: 'Wage & Hour Compliance',
+								href: '#labor&law',
+								onClick: handleMenuItemClick,
+							},
+							{
+								label: 'HR & Staff Development',
+								href: '#hr&staff',
+								onClick: handleMenuItemClick,
+							},
+						]}
+					/>
+				</nav>
+				<Link href="#" className="header__link">
+					Pricing
+				</Link>{' '}
+				<Link href="#" className="header__link">
+					About Us
+				</Link>
+			</div>
 
 			<div className="header__cta">
+				<Link
+					href="https://bb.epeople.com/"
+					className="cta-link"
+					target="_blank"
+				>
+					Client Login
+				</Link>
 				<Link href={ctaLink} className="cta-button">
 					{ctaText}
 				</Link>
@@ -134,14 +143,18 @@ export default function Header() {
 								href: '#hr&staff',
 								onClick: handleMenuItemClick,
 							},
-							{
-								label: 'Login For Facilities',
-								href: 'https://bb.epeople.com/',
-								isLogin: true,
-								onClick: handleMenuItemClick,
-							},
 						]}
-					/>
+					/>{' '}
+					<Link href="#" className="header__link">
+						Pricing
+					</Link>{' '}
+					<Link href="#" className="header__link">
+						About Us
+					</Link>{' '}
+					<Link href="https://bb.epeople.com/" target="_blank">
+						Client Login
+					</Link>
+					<Link href={ctaLink}>{ctaText}</Link>
 				</div>
 			)}
 		</header>

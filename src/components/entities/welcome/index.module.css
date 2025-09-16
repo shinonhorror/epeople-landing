@@ -39,7 +39,7 @@
 .button {
 	background-color: #7432ff;
 	color: white;
-	padding: 24px 28px;
+	padding: 16px 28px;
 	border-radius: 8px;
 	text-decoration: none;
 	transition: background-color 0.2s;

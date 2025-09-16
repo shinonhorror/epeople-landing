@@ -15,15 +15,9 @@ const Solutions = () => {
 					office."
 			/>
 
-			<FadeInSection>
-				<StaffingSolution />
-			</FadeInSection>
-			<FadeInSection>
-				<LawSolution />
-			</FadeInSection>
-			<FadeInSection>
-				<HRSolution />
-			</FadeInSection>
+			<StaffingSolution />
+			<LawSolution />
+			<HRSolution />
 		</div>
 	);
 };

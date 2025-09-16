@@ -75,7 +75,7 @@ const ShiftCard: FC<IShiftCard> = ({ sectionRef }) => {
 			},
 			{
 				iconColor: '#999999',
-				title: 'Schedule',
+				title: 'Scheduled',
 				progressPercent: 15,
 				key: 'schedule',
 				progressRef: animatedSchedule,

@@ -5,12 +5,12 @@ import Image from 'next/image';
 const AI_MOCK = [
 	{
 		title: 'Security',
-		desc: 'Face Recognition confirms the per-verified licensed worker is who they say they are',
+		desc: 'Face Recognition confirms the pre-verified licensed worker is who they say they are',
 		image: '/security.jpg',
 	},
 	{
 		title: 'Compliance',
-		desc: 'Live Audit of Risk- Adjusted PPD & Credentialing Before Every Shift',
+		desc: 'Live Audit of Risk-Adjusted PPD & Credentialing Before Every Shift',
 		image: '/compliance.jpg',
 	},
 	{

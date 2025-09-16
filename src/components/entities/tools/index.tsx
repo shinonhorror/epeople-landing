@@ -2,13 +2,14 @@
 
 import { Icon } from '@iconify/react';
 import styles from './index.module.css';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTextAnimation } from '@/hooks/useTextAnimation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode } from 'swiper/modules';
 import HRSolution from '../solutions/components/hr';
 import LawSolution from '../solutions/components/law';
 import StaffingSolution from '../solutions/components/staffing';
+import gsap from 'gsap';
 
 const TAB_MOCK = [
 	{
@@ -58,7 +59,10 @@ const Tools = () => {
 				{TAB_MOCK.map((item) => (
 					<SwiperSlide className={styles.swiper_slide} key={item.title}>
 						<div
-							onClick={() => setActive(item)}
+							onClick={() => {
+								setActive(item);
+								
+							}}
 							className={`${styles.tab} ${
 								item.id === active.id ? styles.tab_active : ''
 							}`}
@@ -74,7 +78,7 @@ const Tools = () => {
 					</SwiperSlide>
 				))}
 			</Swiper>
-			<div key={active.id}>{active.component}</div>
+			{/* <div key={active.id}>{active.component}</div> */}
 		</section>
 	);
 };

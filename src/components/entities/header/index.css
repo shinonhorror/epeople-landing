@@ -44,7 +44,24 @@
 	align-items: center;
 }
 
-.header__cta .cta-button {
+.header__cta {
+	display: flex;
+	gap: 16px;
+}
+
+.header__link {
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.header__nav-wrapper {
+	display: flex;
+	gap: 32px;
+	align-items: center;
+}
+
+.header__cta .cta-button,
+.cta-link {
 	background-color: #efe7fd;
 	color: #7432ff;
 	padding: 16px 20px;
@@ -55,6 +72,10 @@
 
 .cta-button:hover {
 	background-color: #e7dbff;
+}
+
+.cta-link {
+	background-color: transparent;
 }
 
 /* Dropdown */
@@ -144,8 +165,13 @@
 	align-self: flex-start;
 }
 
+.header__mobile-menu a {
+	font-size: 18px;
+	font-weight: 400;
+}
+
 @media (max-width: 768px) {
-	.header__nav,
+	.header__nav-wrapper,
 	.header__cta {
 		display: none;
 	}

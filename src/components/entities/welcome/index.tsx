@@ -54,7 +54,7 @@ const Welcome = () => {
 					Audits with Confidence.
 				</p>
 				<a id="header-button" href="#scheduleDemo" className={styles.button}>
-					Schedule a Demo
+					Get Started
 				</a>
 			</div>
 			<Image width={600} height={600} alt="header" src="/header-image.png" />

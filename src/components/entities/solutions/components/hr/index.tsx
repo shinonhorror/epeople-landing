@@ -44,7 +44,7 @@ const HRSolution = () => {
 
 	const { progressRef: animatedCertification, textRef: certificationPercent } =
 		useProgressAnimation({
-			progress: 100,
+			progress: 75,
 			trigger: sectionRef,
 			animationOptions: {
 				duration: 1.5,
@@ -82,6 +82,49 @@ const HRSolution = () => {
 
 	return (
 		<section id="hr&staff" ref={sectionRef} className={styles.wrapper}>
+			<div className={styles.text_block}>
+				<div className={styles.text_icon}>
+					<Icon icon="line-md:clipboard-check" />
+				</div>
+				<div className={styles.text_wrapper}>
+					<h3 ref={animatedTitleRef as RefObject<HTMLHeadingElement>}>
+						Digital HR & Credentialing Hub
+					</h3>
+					<p ref={animatedTextRef as RefObject<HTMLParagraphElement>}>
+						Maintaining audit-ready records, onboarding efficiency, credential
+						tracking, internal in-servicing, continuous education training, and
+						standardized HR processes.
+					</p>
+				</div>
+				<FadeInSection>
+					<div className={styles.text_advantages}>
+						<div className={styles.text_advantage}>
+							<Icon icon="carbon:checkmark-filled" />
+							Audit-Ready HR Documentation
+						</div>
+						<div className={styles.text_advantage}>
+							<Icon icon="carbon:checkmark-filled" />
+							Digital Onboarding & Credentialing
+						</div>
+						<div className={styles.text_advantage}>
+							<Icon icon="carbon:checkmark-filled" />
+							Automated Disciplinary Enforcement
+						</div>
+						<div className={styles.text_advantage}>
+							<Icon icon="carbon:checkmark-filled" />
+							Retention & Stability Improvement
+						</div>{' '}
+						<div className={styles.text_advantage}>
+							<Icon icon="carbon:checkmark-filled" />
+							Centralized Documentation Management
+						</div>{' '}
+						<div className={styles.text_advantage}>
+							<Icon icon="carbon:checkmark-filled" />
+							Improved Employee Engagement & Satisfaction
+						</div>
+					</div>
+				</FadeInSection>
+			</div>
 			<div className={styles.image_block}>
 				<div className={styles.profile}>
 					<div className={styles.profile__text__wrapper}>
@@ -111,16 +154,6 @@ const HRSolution = () => {
 							<p className={styles.profile__info__text}>CNA</p>
 						</div>{' '}
 						<div className={styles.profile__info__row}>
-							<p className={styles.profile__info__label}>License</p>
-							<p className={styles.profile__info__text}>CA CNA 01299476</p>
-						</div>{' '}
-						<div className={styles.profile__info__row}>
-							<p className={styles.profile__info__label}>Work Status</p>
-							<p className={styles.profile__info__text}>
-								<span className={styles.profile__tag}>Active</span>
-							</p>
-						</div>
-						<div className={styles.profile__info__row}>
 							<p className={styles.profile__info__label}>Payment Type</p>
 							<p className={styles.profile__info__text}>Contractor</p>
 						</div>
@@ -133,11 +166,43 @@ const HRSolution = () => {
 							<p className={styles.profile__info__text}>
 								<span ref={hourlyPercent}>0</span> $
 							</p>
+						</div>{' '}
+						<div className={styles.profile__info__row}>
+							<p className={styles.profile__info__label}>License</p>
+							<p className={styles.profile__info__text}>CA CNA 01299476</p>
+						</div>{' '}
+						<div className={styles.profile__info__row}>
+							<p className={styles.profile__info__label}>Work Status</p>
+							<p className={styles.profile__info__text}>
+								<span
+									className={styles.profile__tag}
+									style={{ backgroundColor: '#f3d700' }}
+								>
+									Hold
+								</span>
+							</p>
 						</div>
 						<div className={styles.profile__info__row}>
 							<p className={styles.profile__info__label}>Training Period</p>
 							<p className={styles.profile__info__text}>
 								<span className={styles.profile__tag}>Active</span>
+							</p>
+						</div>{' '}
+						<div className={styles.profile__info__row}>
+							<p className={styles.profile__info__label}>Expired</p>
+							<p className={styles.profile__info__text}>
+								<span
+									className={styles.profile__tag}
+									style={{ backgroundColor: '#EC4E46' }}
+								>
+									TB Test
+								</span>{' '}
+								<span
+									className={styles.profile__tag}
+									style={{ backgroundColor: '#EC4E46' }}
+								>
+									License
+								</span>
 							</p>
 						</div>
 						<div className={styles.profile__info__row}>
@@ -186,49 +251,6 @@ const HRSolution = () => {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div className={styles.text_block}>
-				<div className={styles.text_icon}>
-					<Icon icon="line-md:clipboard-check" />
-				</div>
-				<div className={styles.text_wrapper}>
-					<h3 ref={animatedTitleRef as RefObject<HTMLHeadingElement>}>
-						Digital HR & Credentialing Hub
-					</h3>
-					<p ref={animatedTextRef as RefObject<HTMLParagraphElement>}>
-						Maintaining audit-ready records, onboarding efficiency, credential
-						tracking, internal in-servicing, continuous education training, and
-						standardized HR processes.
-					</p>
-				</div>
-				<FadeInSection>
-					<div className={styles.text_advantages}>
-						<div className={styles.text_advantage}>
-							<Icon icon="carbon:checkmark-filled" />
-							Audit-Ready HR Documentation
-						</div>
-						<div className={styles.text_advantage}>
-							<Icon icon="carbon:checkmark-filled" />
-							Digital Onboarding & Credentialing
-						</div>
-						<div className={styles.text_advantage}>
-							<Icon icon="carbon:checkmark-filled" />
-							Automated Disciplinary Enforcement
-						</div>
-						<div className={styles.text_advantage}>
-							<Icon icon="carbon:checkmark-filled" />
-							Retention & Stability Improvement
-						</div>{' '}
-						<div className={styles.text_advantage}>
-							<Icon icon="carbon:checkmark-filled" />
-							Centralized Documentation Management
-						</div>{' '}
-						<div className={styles.text_advantage}>
-							<Icon icon="carbon:checkmark-filled" />
-							Improved Employee Engagement & Satisfaction
-						</div>
-					</div>
-				</FadeInSection>
 			</div>
 		</section>
 	);

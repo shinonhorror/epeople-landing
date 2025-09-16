@@ -16,7 +16,8 @@ export default function Home() {
 	return (
 		<div className={style.main}>
 			<Welcome />
-			<Tools />
+			{/* <Tools /> */}
+			<Solutions />
 			{/* <FadeInSection>
 				<Compliance />
 			</FadeInSection> */}
@@ -35,9 +36,8 @@ export default function Home() {
 			<FadeInSection>
 				<Benefits />
 			</FadeInSection>
-			<Integration />
 			<AI />
-			{/* <Solutions /> */}
+			<Integration />
 			<FadeInSection>
 				<section id="scheduleDemo">
 					<ScheduleDemoForm />

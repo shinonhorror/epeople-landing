@@ -33,6 +33,10 @@ const LawSolution = () => {
 
 	return (
 		<section id="labor&law" className={styles.wrapper} ref={sectionRef}>
+			<div className={styles.image_block}>
+				<ShiftCard sectionRef={sectionRef} />
+				<AuthCard sectionRef={sectionRef} />
+			</div>
 			<div className={styles.text_block}>
 				<div className={styles.text_icon}>
 					<Icon icon="icon-park-outline:people-safe" />
@@ -74,10 +78,6 @@ const LawSolution = () => {
 						</div>
 					</div>
 				</FadeInSection>
-			</div>
-			<div className={styles.image_block}>
-				<ShiftCard sectionRef={sectionRef} />
-				<AuthCard sectionRef={sectionRef} />
 			</div>
 		</section>
 	);

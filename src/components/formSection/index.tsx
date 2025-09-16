@@ -97,52 +97,52 @@ const ScheduleDemoForm: React.FC = () => {
 };
 
   return (
-    <section className="schedule-demo">
-      <h2 className="schedule-demo__title">Schedule a 30-Minute Demo</h2>
-      <form className="schedule-demo__form" onSubmit={handleSubmit}>
-        <InputField
-          label="First name"
-          name="firstName"
-          value={formData.firstName}
-          onChange={handleChange}
-          placeholder="First name"
-        />
-        <InputField
-          label="Last name"
-          name="lastName"
-          value={formData.lastName}
-          onChange={handleChange}
-          placeholder="Last name"
-        />
-        <InputField
-          label="Email"
-          name="email"
-          type="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="Hello@epeopleai.com"
-        />
-        <InputField
-          label="Phone"
-          name="phone"
-          type="tel"
-          value={formData.phone}
-          onChange={handleChange}
-          placeholder="+1"
-        />
-        <InputField
-          label="How Can We Help"
-          name="message"
-          type="text"
-          value={formData.message}
-          onChange={handleChange}
-          placeholder="Message"
-          className="full-width"
-        />
-        <FormButton type="submit" text="Submit" disabled={isSubmitting}/>
-      </form>
-    </section>
-  );
+		<section className="schedule-demo">
+			<h2 className="schedule-demo__title">How Can We Help?</h2>
+			<form className="schedule-demo__form" onSubmit={handleSubmit}>
+				<InputField
+					label="First name"
+					name="firstName"
+					value={formData.firstName}
+					onChange={handleChange}
+					placeholder="First name"
+				/>
+				<InputField
+					label="Last name"
+					name="lastName"
+					value={formData.lastName}
+					onChange={handleChange}
+					placeholder="Last name"
+				/>
+				<InputField
+					label="Email"
+					name="email"
+					type="email"
+					value={formData.email}
+					onChange={handleChange}
+					placeholder="Hello@epeopleai.com"
+				/>
+				<InputField
+					label="Phone"
+					name="phone"
+					type="tel"
+					value={formData.phone}
+					onChange={handleChange}
+					placeholder="+1"
+				/>
+				<InputField
+					label="How Can We Help"
+					name="message"
+					type="text"
+					value={formData.message}
+					onChange={handleChange}
+					placeholder="Message"
+					className="full-width"
+				/>
+				<FormButton type="submit" text="Submit" disabled={isSubmitting} />
+			</form>
+		</section>
+	);
 };
 
 export default ScheduleDemoForm;
