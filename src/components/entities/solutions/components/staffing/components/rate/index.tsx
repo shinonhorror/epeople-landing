@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef } from 'react';
+import { CSSProperties, FC, useEffect, useRef } from 'react';
 import styles from './index.module.css';
 import { Icon } from '@iconify/react';
 import gsap from 'gsap';
@@ -28,7 +28,7 @@ const statusCards = [
 	},
 ];
 
-const RateCard = ({ style }) => {
+const RateCard = ({ style }: { style: CSSProperties | undefined }) => {
 	const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
 	useEffect(() => {
