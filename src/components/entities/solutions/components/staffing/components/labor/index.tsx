@@ -39,6 +39,7 @@ const LaborCard: FC<ILaborCard> = ({ sectionRef }) => {
 
 	return (
 		<div className={styles.wrapper}>
+			<RateCard style={{ gridColumn: '1/-1' }} />
 			<div className={styles.card_wrapper}>
 				<div
 					className={styles.title_icon}
@@ -64,7 +65,6 @@ const LaborCard: FC<ILaborCard> = ({ sectionRef }) => {
 					$<span ref={overagePercent}> 0</span> / day
 				</p>
 			</div>
-			<RateCard style={{ gridColumn: '1/-1' }} />
 		</div>
 	);
 };

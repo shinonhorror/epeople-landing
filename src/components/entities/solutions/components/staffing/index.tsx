@@ -78,8 +78,8 @@ const StaffingSolution = () => {
 				</FadeInSection>
 			</div>
 			<div className={styles.image_block}>
-				<LaborCard sectionRef={sectionRef} />
 				<PPDCard />
+				<LaborCard sectionRef={sectionRef} />
 			</div>
 		</section>
 	);
